@@ -100,7 +100,19 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
             font-weight: bold; /* makes it stand out more by bolding it */
             margin-right: 25px; /* spreads the links out so they don't clump */
         }
-
+        .nav_button {
+            background-color: black; 
+            margin-left: 10px; 
+            border-radius: 10px;
+            padding: 10px; 
+            width: 90px;
+        }
+        button a {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        /* Everything directly above is for the navigation bar ^ */
     </style>
 <head>
     <title>Alex McDonald's Login Website</title>
@@ -109,7 +121,7 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
     <div class="banner">
         <div class="banner_content">
             <div class="banner_text">
-                Are you new to the website? If so, try using the username rode@revere.com or creator@php.com with the password of Pw1$.
+                Are you new to the website? If so, try using the username rode2@revere.com or creator@php.com with the password of Pw1$.
             </div>
             <button class="banner_close" type="button">
                 <span class="material-icons">
@@ -128,10 +140,12 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
             <div class="nav_logo">
                 <a href="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1xw:0.74975xh;0,0.190xh&resize=1200:*">Coding</a> 
             </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul><!--These links are currently empty but I can add to them later -->
+                
+                <li class="nav_button"><a href="#">Home</a></li>
+                <li class="nav_button"><a href="#">About</a></li>
+                <li class="nav_button"><a href="#">Contact</a></li>
+                
             </ul>
         </div>
     </div>
