@@ -17,10 +17,10 @@ if (isset($_POST['subPage'])) {
 ?>
 <html>
 <head>
-    <title>Alex McDonald Wk 4 Performance Assessment</title>
+    <title>Alex McDonald Final</title>
 </head>
 <body>
-    <h1>Alex McDonald Wk 4 Performance Assessment</h1>
+    <h1>Alex McDonald Final</h1>
     <h2>Products</h2>
     <ul>
         <li><h2><a href="user_view_products.php" name="subPage">View Products</a></h2></li>

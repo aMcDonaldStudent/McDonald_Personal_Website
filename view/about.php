@@ -1,36 +1,18 @@
 <?php
+//ABOUT PAGE TO TELL YOU ABOUT MYSELF
 session_start();
 
-require_once(__DIR__.'\controller\user.php');
-require_once(__DIR__.'\controller\user_controller.php');
-require_once(__DIR__.'\util\security.php');
+require_once(__DIR__ . '/../controller/user.php');
+require_once(__DIR__ . '/../controller/user_controller.php');
+require_once(__DIR__ . '/../util/security.php');
+
 
 Security::checkHTTPS();
+//removed login ability from this page.
+//this DOES remember your login from this page interestingly
+//MAYBE add some sort of system where you can click on the top if you're admin versus tech to go back
 
-//set the message related to login/logout functionality
-$login_msg = isset($_SESSION['logout_msg']) ? 
-    $_SESSION['logout_msg'] : '';
 
-if (isset($_POST['email']) & isset($_POST['pw'])) {
-    //login and password fields were set
-    $user_level = UserController::validUser(
-        $_POST['email'], $_POST['pw']);
-        // REMOVED USER 
-    if ($user_level === '1') {
-        $_SESSION['admin'] = true;
-        $_SESSION['user'] = false;
-        $_SESSION['tech'] = false;
-        header("Location: view/admin.php");
-    } else if ($user_level === '2') {
-        $_SESSION['admin'] = false;
-        $_SESSION['tech'] = true;
-        $_SESSION['user'] = false;
-        header("Location: view/tech.php"); 
-        //changed this  part so Tech becomes 2 and not  user
-    } else {
-        $login_msg = 'Failed Authentication - try again.';
-    }
-}
 ?>
 <html>
     
@@ -108,20 +90,20 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
             width: 90px;
         }
         button a {
-            color: white;
+            color: purple;
             font-weight: bold;
             font-size: 15px;
         }
         /* Everything directly above is for the navigation bar ^ */
     </style>
 <head>
-    <title>Alex McDonald's Login Website</title>
+    <title>Alex McDonald's About Page</title>
 </head>
 <body>
     <div class="banner">
         <div class="banner_content">
             <div class="banner_text">
-                Are you new to the website? If so, try using the username rode2@revere.com or creator@php.com with the password of Pw1$.
+                This page will tell you a little about myself.
             </div>
             <button class="banner_close" type="button">
                 <span class="material-icons">
@@ -142,8 +124,8 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
             </div>
             <ul><!--These links are currently empty but I can add to them later -->
                 
-                <!--We are at home <li class="nav_button"><a href="#"></a></li> -->
-                <li class="nav_button"><a href="view/about.php">About</a></li>
+                <li class="nav_button"><a href="https://localhost/McDonald_Final/index.php">Home</a></li>
+                <!-- This is about page <li class="nav_button"><a href="#">About</a></li> -->
                 <li class="nav_button"><a href="#">Contact</a></li>
                 
             </ul>
@@ -151,16 +133,9 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
     </div>
     <!--Navigation bar^-->
     <h1>Alex McDonald's Website</h1>
-    <h2>Please Log in</h2>
-    <form method='POST'>
-        <h3>Login ID (e-mail): <input type="text" 
-            name="email"></h3>
-        <h3>Password: <input type="password" name="pw"></h3>
-        <div class="center"> <!--This centers the button-->
-            <input type="submit" value="Login" name="login">
-        </div>
-    </form>
-    <h2><?php echo $login_msg; ?></h2>
+    <h2>About me:</h2>
+    <p>I am a fresh student out of ECPI who has a passion for coding. I love the way many programs fit together to make something special.
+        I find a lot of space in the coding world for creative ways of completing tasks and that is something I am predispositioned to.</p>
     <script>
         document.querySelector(".banner_close").addEventListener("click", function() {
             this.closest(".banner").style.display = "none";

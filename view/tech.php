@@ -19,10 +19,10 @@ if (isset($_POST['subPage2'])) {
 ?>
 <html>
 <head>
-    <title>Alex McDonald Final Practical</title>
+    <title>Alex McDonald</title>
 </head>
 <body>
-    <h1>Alex McDonald Final Practical</h1>
+    <h1>Technician User Portal</h1>
     <h2>Manage Incidents</h2>
     <ul>
         <li><h2><a href="tech_incident_management.php" name="subPage">Manage Incidents</a></h2></li>
