@@ -46,6 +46,7 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
         /*^General formatting for the login*/
         html, body {
             margin: 0;
+            background: #e2f7c3;
             
         }
 
@@ -75,7 +76,7 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
         }
         /*Everything directly above is for general green banner*/
         .nav_bar {
-            background: crimson;
+            background: #a4e3f3;
             font-family: calibri;
             padding-right: 15px;
             padding-left: 15px;
@@ -88,7 +89,7 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
         .nav_logo a {
             font-size: 35px; /* pump up size */
             font-weight: 600; /* put it in bold */
-            color: white; /* make it white to stand out vs the red */
+            color: #1328eb; /*Blue to stand against light blue */
         }
         li {
             list-style: none; 

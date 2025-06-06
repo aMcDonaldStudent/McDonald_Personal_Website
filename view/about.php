@@ -58,7 +58,7 @@ Security::checkHTTPS();
         }
         /*Everything directly above is for general green banner*/
         .nav_bar {
-            background: crimson;
+            background: #a4e3f3;
             font-family: calibri;
             padding-right: 15px;
             padding-left: 15px;
@@ -71,7 +71,7 @@ Security::checkHTTPS();
         .nav_logo a {
             font-size: 35px; /* pump up size */
             font-weight: 600; /* put it in bold */
-            color: white; /* make it white to stand out vs the red */
+            color: #1328eb; /*Blue to stand against light blue */
         }
         li {
             list-style: none; 
@@ -95,42 +95,42 @@ Security::checkHTTPS();
             font-weight: bold;
             font-size: 15px;
         }
+        /* Nav stuff^ */
         .about_section {
-    background-color: #fecd58;
-    border-radius: 25px;
-    padding: 16px;
-    margin: 10 auto;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+            background-color: #fecd58;
+            border-radius: 25px;
+            padding: 16px;
+            margin: 10 auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.about_section h1, .about_section h2 {
-    text-align: center; /* Keep headings centered */
-}
+        .about_section h1, .about_section h2 {
+            text-align: center; /* Keep headings centered */
+        }
 
-.about_section_content {
-    display: flex;
-    align-items: flex-start; /* Align image and text at the top */
-    justify-content: flex-start;
-    width: 100%;
-    gap: 20px; /* Space between image and text */
-}
+        .about_section_content {
+            display: flex;
+            align-items: flex-start; /* Align image and text at the top */
+            justify-content: flex-start;
+            width: 100%;
+            gap: 20px; /* Space between image and text */
+        }
 
-.about_section img {
-    width: 150px; /* Control the size of the image */
-    border-radius: 50%; /* Optional: Make the image round */
-    /*^doesn't do anything when tweaked?*/
-}
+        .about_section img {
+            width: 150px; /* Control the size of the image */
+            border-radius: 50%; /* Optional: Make the image round */
+            /*^doesn't do anything when tweaked?*/
+        }
 
-.about_section p {
-    font-size: 24px; /*increase text size*/
-    text-align: left; /* Align the paragraph text to the left */
-    max-width: 80%; /* Limit the paragraph width */
-}
-
-        /* Everything directly above is for the navigation bar ^ */
+        .about_section p {
+            font-size: 24px; /*increase text size*/
+            text-align: left; /* Align the paragraph text to the left */
+            max-width: 80%; /* Limit the paragraph width */
+        }
+        /*about section stuff*/
     </style>
 <head>
     <title>Alex McDonald's About Page</title>
