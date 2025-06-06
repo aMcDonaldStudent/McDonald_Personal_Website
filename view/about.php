@@ -28,6 +28,7 @@ Security::checkHTTPS();
         /*^General formatting for the login*/
         html, body {
             margin: 0;
+            background: #e2f7c3;
             
         }
 
@@ -94,6 +95,41 @@ Security::checkHTTPS();
             font-weight: bold;
             font-size: 15px;
         }
+        .about_section {
+    background-color: #fecd58;
+    border-radius: 25px;
+    padding: 16px;
+    margin: 10 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_section h1, .about_section h2 {
+    text-align: center; /* Keep headings centered */
+}
+
+.about_section_content {
+    display: flex;
+    align-items: flex-start; /* Align image and text at the top */
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px; /* Space between image and text */
+}
+
+.about_section img {
+    width: 150px; /* Control the size of the image */
+    border-radius: 50%; /* Optional: Make the image round */
+    /*^doesn't do anything when tweaked?*/
+}
+
+.about_section p {
+    font-size: 24px; /*increase text size*/
+    text-align: left; /* Align the paragraph text to the left */
+    max-width: 80%; /* Limit the paragraph width */
+}
+
         /* Everything directly above is for the navigation bar ^ */
     </style>
 <head>
@@ -132,10 +168,19 @@ Security::checkHTTPS();
         </div>
     </div>
     <!--Navigation bar^-->
-    <h1>Alex McDonald's Website</h1>
-    <h2>About me:</h2>
-    <p>I am a fresh student out of ECPI who has a passion for coding. I love the way many programs fit together to make something special.
-        I find a lot of space in the coding world for creative ways of completing tasks and that is something I am predispositioned to.</p>
+    
+ <div class="about_section">
+        <h1>Alex McDonald's Website</h1>
+        <h2>About me:</h2>
+        <div class="about_section_content">
+            <img src="Professional_Photo.png" alt="Professional Photo">
+            <p>I am a fresh graduate out of ECPI University who is looking to break into the coding space. I love the way many programs fit together to make something special like a Rube Goldberg machine of excellence.
+                I first gained this appreciation for design after taking a web development course in 2021 that taught me about good and bad website design.
+            I enjoy the feeling of being a part of a team and I think I am an excellent team player who is able to fit whatever role may be needed. 
+            I've owned dogs all my life so I have a great sense of duty and promptness, waking up early and always being on time for events. Growing up with ADHD I learned the hard way about how to manage tasks and organize myself.
+            In the long run, these early trials have helped increase my perseverence and work ethic as an individual greatly and I hope to succeed in taking these skills into the workplace.</p>
+        </div>
+    </div>
     <script>
         document.querySelector(".banner_close").addEventListener("click", function() {
             this.closest(".banner").style.display = "none";
