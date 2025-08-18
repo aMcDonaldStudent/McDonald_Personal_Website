@@ -114,7 +114,28 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
             font-size: 15px;
         }
         /* Everything directly above is for the navigation bar ^ */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #f9f9f9;
+            min-width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Above is dropdown logic */
+
     </style>
+    
 <head>
     <title>Alex McDonald's Login Website</title>
 </head>
@@ -144,8 +165,20 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
             <ul><!--These links are currently empty but I can add to them later -->
                 
                 <!--We are at home <li class="nav_button"><a href="#"></a></li> -->
-                <li class="nav_button"><a href="view/about.php">About</a></li>
-                <li class="nav_button"><a href="#">Contact</a></li>
+                
+                <li class="nav_button dropdown">
+                <a href="#">Contact</a>
+                    <div class="dropdown-content">
+                        <p>Copy Email: <span id="emailToCopy">alex@mc-ds.com</span></p>
+                        <button id="copyBtn">Copy Email</button>
+                        <p>Copy Phone Number: <span id="phoneToCopy">804-840-9507</span></p>
+                        <button id="copyBtn2">Copy Phone Number</button>
+                    </div>
+                </li>
+                <li class="nav_button">
+                    <a href="view/about.php">About</a>
+                </li>
+    <!--</div> -->
                 
             </ul>
         </div>
@@ -167,5 +200,34 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
             this.closest(".banner").style.display = "none";
         });
     </script>
+
+  <script> 
+    //Script logic in this section deals with the dropdown copy buttons
+    //for email and phone number that show when "Contact" is clicked.
+    const copyBtn = document.getElementById("copyBtn");
+    const emailToCopy = document.getElementById("emailToCopy").innerText;
+    const copyBtn2 = document.getElementById("copyBtn2");
+    const phoneToCopy = document.getElementById("phoneToCopy").innerText;
+
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(emailToCopy)
+        .then(() => {
+          alert("Copied to clipboard!");
+        })
+        .catch(err => {
+          console.error("Failed to copy: ", err);
+        });
+    });
+
+    copyBtn2.addEventListener("click", () => {
+      navigator.clipboard.writeText(phoneToCopy)
+        .then(() => {
+          alert("Copied to clipboard!");
+        })
+        .catch(err => {
+          console.error("Failed to copy: ", err);
+        });
+    });
+  </script>
 </body>
 </html>
