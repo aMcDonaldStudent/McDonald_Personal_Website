@@ -9,7 +9,7 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "pwa-chrome",
-            "url": "https://localhost/McDonald_Final",
+            "url": "https://localhost/McDonald_Personal_Website-1",
             "webRoot": "${workspaceFolder}"
         },
         {

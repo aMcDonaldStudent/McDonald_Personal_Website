@@ -122,7 +122,7 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
     <div class="banner">
         <div class="banner_content">
             <div class="banner_text">
-                Are you new to the website? If so, try using the username rode2@revere.com or creator@php.com with the password of Pw1$.
+                Are you new to the website? If so, try using the username rode2@revere.com (Maintenance role) or creator@php.com (Administrator role) with the password of Pw1$.
             </div>
             <button class="banner_close" type="button">
                 <span class="material-icons">
@@ -139,7 +139,7 @@ if (isset($_POST['email']) & isset($_POST['pw'])) {
     <div class="nav_bar">
         <div class="nav_div">
             <div class="nav_logo">
-                <a href="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1xw:0.74975xh;0,0.190xh&resize=1200:*">Coding</a> 
+                <a href="https://www.linkedin.com/in/alex-mcdonald-7a7a581b6">My Linkedin Profile</a> 
             </div>
             <ul><!--These links are currently empty but I can add to them later -->
                 
